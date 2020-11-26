@@ -1,8 +1,11 @@
-Install openzeppelin functionality
+1. Install Ganache CLI:
+    npm install -g ganache-cli
+
+Start Ganace CLI with: 
+    ganache-cli -d
+
+2. Install openzeppelin functionality
 
 https://www.npmjs.com/package/openzeppelin-solidity
 
 npm install @openzeppelin/contracts --save
-
-
-
