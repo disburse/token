@@ -5,6 +5,9 @@ pragma solidity >=0.6.0;
 //import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "../node_modules/@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
+// Code for ERC20 can be found here:
+// https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol
+
 contract DisburseToken is ERC20 {
 
     address public admin;
@@ -27,7 +30,7 @@ contract DisburseToken is ERC20 {
         // Similar to how
         // 1 dollar = 100 cents
         // 1 token = 1 * (10 ** decimals)
-        _mint(msg.sender, 100 * 10 ** uint(decimals()));
+        _mint(admin, 100 * 10 ** uint(decimals()));
     }
 
 }
