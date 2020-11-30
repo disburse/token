@@ -33,4 +33,10 @@ contract DisburseToken is ERC20 {
         _mint(admin, 100 * 10 ** uint(decimals()));
     }
 
+    // Destroy contract and reclaim leftover funds.
+    function kill() public {
+        require(msg.sender == admin);
+        selfdestruct(msg.sender);
+    }
+
 }
